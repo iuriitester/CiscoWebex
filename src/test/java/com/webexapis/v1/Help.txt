@@ -1,0 +1,18 @@
+API folder Structure
+
+* webexapis.v1 - based URI for RestAssure
+    * EndPoint (in developing)
+        * POJORequest
+            Contain a request object, also these classes have subclasses what depicts the request parameters
+        * POJOResponse
+            POJO Response is converted from a response in JSON format
+        * Requests
+            Class contains methods GET, POST, PUT, DELETE each of endpoints
+            Pattern of the name method
+                        post(POJORequest pojoRequest) - if it is CREATE request
+                        get(POJORequest pojoRequest) - if it is READ request
+                        put(POJORequest pojoRequest) - if it is UPDATE request
+                        delete(POJORequest pojoRequest) - if it is DELETE request
+
+
+For Example: broadWorksSubscribers
