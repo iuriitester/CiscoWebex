@@ -1,20 +1,53 @@
-Folder
-com.webexapis contains all API enpoinds
-com.webexuis contains all web applications and their web pages
-runners contain classes for running of the application
-step_definitions contain all steps for testing and corresponded to userStories in Jira
+Packages of the framework
+
+"com.webexapis" contains all API enpoinds
+
+"com.webexuis" contains all web applications and their web pages
+
+"runners" contain classes for running of the application
+
+"step_definitions" contain all steps for testing and corresponded to userStories in Jira
+
 Utilities - the framework core
+
 api package
-APIAuthorization is the authorization class for the united API
+"APIAuthorization" is the authorization class for the united API
+
 Several Web applications work with one API
+
 dictionary package
 Enum objects. They are used everywhere in the framework.
 For example. a user enters a web application name as a parameter. There are the parameter group which are controlled by the framework.
 The framework has dictionary for these purposes. It checks the entered user parameter by the dictionary and used enum object as parameter in the framework.
+
 exception package
 it is used for the user exceptions
+
 generalUtilities package
-Authentication.class is bases class for all the authorisation classes in the framework (Each web application has own authentication class)
-DeleteDirectory (in developing) the class delete directory where the API token is kept.
+"Authentication" class is bases class for all the authorisation classes in the framework (Each web application has own authentication class)
+
+"DeleteDirectory" (in developing) the class delete directory where the API token is kept.
+
 The framework defines API token and commites it through git command to github. It need each docker can has access to the token.
+
+"Encoder" is class for encryption and decryption the some variable values (in developing)
+
+"Environment" class determines applications and its properties before start.
+
+"Git" and "Git Congrol" classes are used during saving the token into remote repository "Token" all the framework copies 
+which running on Docker can to get token and authorization in the API application in the future (in developing).
+
+Parsing package will contains all tools for parsing.
+
+"BrowserUnit" and "Driver" calsses of Selenium. 
+
+Resours package for resourses.
+"app" contains the proporty files for each web application.
+
+"env" contains the proporty files for each environment (qa, dev ...)
+
+"features" contains all the featury files of the framework
+
+"Other" is for other needs. The framework save token in the file Token here. Next Git class carry out "git push" in the remote repository "Token" on GitHub.
+
 Pipeline is depicted in the powerPoint file in this project.
